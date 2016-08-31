@@ -1,0 +1,14 @@
+superheroName, alterEgo, universe, hasCape, power, archNemesis)
+Superman,Clark Kent,DC,true,strength,Lex Luthor
+Wonder Woman,Diana Prince,DC,false,strength,Cheetah
+Batman,Bruce Wayne,DC,true,intelligence,Joker
+Professor X,Charles Xavier,Marvel,false,psychic,Magneto
+Spiderman,Peter Parker,Marvel,false,wall climbing,Doctor Octopus
+Captain America,Steve Rogers,Marvel,false,super soldier,Red Skull
+Iron Man,Tony Stark,Marvel,false,iron suit,Mandarin
+Wolverine,Logan,Marvel,false,healing,Sabretooth
+Black Widow,Natasha Romanoff,Marvel,false,super spy,Winter Soldier
+Hulk,Bruce Banner,Marvel,false,indestructible/strength,Red Hulk
+Thor Odinson,None,Marvel,true,godlike power/Mjolnir,Loki
+Flash,Barry Allen,DC,false,speed,Reverse-Flash
+Aquaman,Arthur Curry,DC,false,talks to fish,Black Manta
