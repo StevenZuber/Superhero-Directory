@@ -23,11 +23,8 @@ prefix="form"%>
 	<br>
 	<a href="addHero.html">Add Hero to Directory</a>
 	<br>
-	<a href="dropDown.do">Remove Hero from Directory</a>
-	<br>
 	<a href="goToChangeHero.do">Change a Hero's Name</a>
-	<br>
-	<a href="goToKillNemesis.do">Kill a Nemesis</a>
+
 
 </body>
 </html>

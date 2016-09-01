@@ -42,11 +42,9 @@ prefix="form"%>
 			</table>
 	</div>
 	<br>
-			<a href="Heroes.do" >See Hero Directory</a>
-			<br>
 			<a href="addHero.html">Add Hero to Directory</a>
 			<br>
-			<a href="goTochangeHero.do">Change a Hero's Name</a>
+			<a href="goToChangeHero.do">Change a Hero's Name</a>
 			<br>
 			<a href="goToKillNemesis.do">Kill a Nemesis</a>
 
