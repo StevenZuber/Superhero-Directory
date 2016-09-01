@@ -7,25 +7,43 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-//@SessionAttributes("oldBoss")
+// @SessionAttributes("oldBoss")
 public class SuperheroDirectoryController {
 	@Autowired
-	private HeroDAO HeroDAO;
+	private HeroDAO heroDAO;
 
-	
 	@RequestMapping("Heroes.do")
-	public ModelAndView firstBoss(String firstBoss) {
+	public ModelAndView view() {
 		ModelAndView mv = new ModelAndView();
+//		mv.setViewName("removeHero.jsp");
 		mv.setViewName("view.jsp");
-		mv.addObject("heroList", HeroDAO.getHeroes());
-		return mv;	
+		mv.addObject("heroList", heroDAO.getHeroes());
+		return mv;
 	}
-	@RequestMapping(path="addHero.do", method=RequestMethod.POST)
+
+	@RequestMapping(path = "addHero.do", method = RequestMethod.POST)
 	public ModelAndView newHero(Hero hero) {
-		HeroDAO.addHero(hero);
+		heroDAO.addHero(hero);
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("heroList", HeroDAO.getHeroes());
+		mv.addObject("heroList", heroDAO.getHeroes());
 		mv.setViewName("view.jsp");
 		return mv;
-}
+	}
+	@RequestMapping("removeHero.do")
+	public ModelAndView removeHero(String heroName) {
+		heroDAO.removeHero(heroDAO.getHeroByName(heroName));
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("heroList", heroDAO.getHeroes());
+		System.out.println("+++++++++" + heroName);
+		mv.setViewName("view.jsp");
+		return mv;
+	}
+		@RequestMapping("dropDown.do")
+		public ModelAndView dropDown() {
+			ModelAndView mv = new ModelAndView();
+			mv.addObject("heroList", heroDAO.getHeroes());
+//			System.out.println("============="+HeroDAO.getHeroes());
+			mv.setViewName("removeHero.jsp");
+			return mv;
+	}
 }

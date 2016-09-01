@@ -17,13 +17,9 @@
 				<th>Powers</th>
 				<th>Arch Nemesis</th>
 			</tr>
-		
-
-
-	
 
 		<c:forEach var="hero" items="${heroList}">
-			<option value="${hero.heroName}">${hero.heroName}</option>
+	<!-- 		<option value="${hero.heroName}">${hero.heroName}</option> -->
 
 			
 				<tr>

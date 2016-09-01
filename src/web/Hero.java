@@ -7,6 +7,8 @@ public class Hero {
 	private String hasCape;
 	private String power;
 	private String archNemesis;
+	private int id;
+	private static int counter;
 	
 	public Hero(){}
 	
@@ -18,6 +20,8 @@ public class Hero {
 		this.hasCape = hasCape;
 		this.power = power;
 		this.archNemesis = archNemesis;
+		this.id = counter;
+		counter++;
 	}
 
 
@@ -59,6 +63,15 @@ public class Hero {
 	}
 	public void setArchNemesis(String archNemesis) {
 		this.archNemesis = archNemesis;
+	}
+
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	@Override

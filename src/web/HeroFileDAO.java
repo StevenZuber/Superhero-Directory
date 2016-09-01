@@ -58,7 +58,7 @@ public class HeroFileDAO implements HeroDAO
 
 
 	@Override
-	public Hero getFindHero(String heroName) {
+	public Hero getHeroByName(String heroName) {
 		Hero h = null;
 		for(Hero hero : heroes) {
 			if (hero.getHeroName().equals(heroName)){
@@ -71,12 +71,18 @@ public class HeroFileDAO implements HeroDAO
 
 	@Override
 	public Hero getHero() {
-		// TODO Auto-generated method stub
+
 		return null;
 	}
 	
 	@Override
 	public void addHero(Hero hero){
 		heroes.add(hero);
+	}
+	@Override
+	//find the method that removes by index number. 
+	//this method also needs to match hero name to index number.
+	public void removeHero(Hero hero){
+		heroes.remove(hero);
 	}
 }

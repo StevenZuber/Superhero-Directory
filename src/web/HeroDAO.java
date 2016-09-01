@@ -5,9 +5,9 @@ public interface HeroDAO {
 	
 		public List<Hero> getHeroes();
 		public Hero getHero();
-		Hero getFindHero(String heroName);
 		void addHero(Hero hero);
-
+		void removeHero(Hero hero);
+		Hero getHeroByName(String heroName);
 	}
 
 
