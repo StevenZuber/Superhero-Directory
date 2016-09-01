@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags/form"
+prefix="form"%>
 <html>
 <head>
 <title>Heroes List</title>
@@ -8,7 +10,7 @@
 </head>
 <body>
 	<div class="HeroInfo">
-		<table>
+		<table class="table table-striped">
 			<tr>
 				<th>Hero Name</th>
 				<th>Alter Ego</th>
@@ -29,14 +31,24 @@
 					<td>${hero.hasCape }</td>
 					<td>${hero.power }</td>
 					<td>${hero.archNemesis }</td>
-					
+					<td>	
+						<form action="removeHero.do" method="POST">
+						<input type="hidden" value="${hero.heroName}" name="heroName" />
+						<input type="submit" value="Delete Hero" />
+						</form>
+					</td>
 				</tr>
 		</c:forEach>
 			</table>
-
-
-
 	</div>
+	<br>
+			<a href="Heroes.do" >See Hero Directory</a>
+			<br>
+			<a href="addHero.html">Add Hero to Directory</a>
+			<br>
+			<a href="goTochangeHero.do">Change a Hero's Name</a>
+			<br>
+			<a href="goToKillNemesis.do">Kill a Nemesis</a>
 
 </body>
 </html>

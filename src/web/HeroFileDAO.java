@@ -85,4 +85,10 @@ public class HeroFileDAO implements HeroDAO
 	public void removeHero(Hero hero){
 		heroes.remove(hero);
 	}
+
+	@Override
+	public Hero changeName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
