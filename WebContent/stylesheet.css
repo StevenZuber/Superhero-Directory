@@ -35,7 +35,7 @@ a:link {
 
 /* visited link */
 a:visited {
-    color: green;
+    color: black;
 }
 
 /* mouse over link */
@@ -48,4 +48,47 @@ a:hover {
 a:active {
     color: blue;
 }
-   
+
+input[type=button], input[type=submit]   {
+    background-color: #a9a9a9;
+    border:groove;
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #767676;
+    border: 1px solid #555;
+}
+
+li {
+    float: left;
+    text-align: center;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+li a:hover {
+    background-color: #111;
+}
+li a.active {
+    background-color: #2228b9;
+    color: white;
+}

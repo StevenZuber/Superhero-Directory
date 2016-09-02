@@ -6,7 +6,12 @@ prefix="form"%>
 <head>
 <title>Heroes List</title>
 <link rel="stylesheet" type="text/css" href="stylesheet.css" />
-
+	<ul>
+			<li><a class="active" href="Heroes.do" >See Hero Directory</a></li>
+			<li><a href="addHero.html">Add Hero to Directory</a></li>
+			<li><a href="goToChangeHero.do">Change a Hero's Name</a></li>
+			<li><a href="goToKillNemesis.do">Kill a Nemesis</a></li>
+</ul>
 </head>
 <body>
 	<div class="HeroInfo">
@@ -18,6 +23,7 @@ prefix="form"%>
 				<th>Has Cape</th>
 				<th>Powers</th>
 				<th>Arch Nemesis</th>
+				<th>Remove</th>
 			</tr>
 
 		<c:forEach var="hero" items="${heroList}">
@@ -43,12 +49,7 @@ prefix="form"%>
 		</c:forEach>
 			</table>
 	</div>
-	<br>
-			<a href="addHero.html">Add Hero to Directory</a>
-			<br>
-			<a href="goToChangeHero.do">Change a Hero's Name</a>
-			<br>
-			<a href="goToKillNemesis.do">Kill a Nemesis</a>
+	
 
 </body>
 </html>
