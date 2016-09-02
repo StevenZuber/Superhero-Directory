@@ -25,7 +25,9 @@ prefix="form"%>
 
 			
 				<tr>
-					<td>${hero.heroName}</td>
+					<td>
+					<a href="goToChangeHero.do">${hero.heroName }</a>
+					</td>
 					<td>${hero.alterEgo }</td>
 					<td>${hero.universe }</td>
 					<td>${hero.hasCape }</td>
@@ -34,7 +36,7 @@ prefix="form"%>
 					<td>	
 						<form action="removeHero.do" method="POST">
 						<input type="hidden" value="${hero.heroName}" name="heroName" />
-						<input type="submit" value="Delete Hero" />
+						<input class=btn-group-lg type="submit" value="Delete Hero" />
 						</form>
 					</td>
 				</tr>

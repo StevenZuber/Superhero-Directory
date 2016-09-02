@@ -10,7 +10,7 @@ prefix="form"%>
 </head>
 <body>
 	<h3>Change a Hero's Name</h3>
-	<form action="changeHero.do" method="POST">
+	<form class=flat:hover action="changeHero.do" method="POST">
 		<select name="heroName">
 			<c:forEach var="hero" items="${heroList}">
 				<option value="${hero.heroName}">${hero.heroName}</option>

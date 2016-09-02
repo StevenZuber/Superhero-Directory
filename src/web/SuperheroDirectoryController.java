@@ -22,7 +22,7 @@ public class SuperheroDirectoryController {
 		return mv;
 	}
 
-	@RequestMapping(path = "addHero.do", method = RequestMethod.POST)
+	@RequestMapping(path = "addHero.do", method = RequestMethod.POST) 
 	public ModelAndView newHero(Hero hero) {
 		heroDAO.addHero(hero);
 		ModelAndView mv = new ModelAndView();
