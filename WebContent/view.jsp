@@ -11,9 +11,10 @@ prefix="form"%>
 			<li><a href="addHero.html">Add Hero to Directory</a></li>
 			<li><a href="goToChangeHero.do">Change a Hero's Name</a></li>
 			<li><a href="goToKillNemesis.do">Kill a Nemesis</a></li>
+			<li style="float:right"><a class="about" href="https://www.linkedin.com/in/steven-zuber-9849095b">About the Author</a></li>
 </ul>
 </head>
-<body>
+<body class="view">
 	<div class="HeroInfo">
 		<table class="table table-striped">
 			<tr>
@@ -49,7 +50,6 @@ prefix="form"%>
 		</c:forEach>
 			</table>
 	</div>
-	
 
 </body>
 </html>

@@ -11,6 +11,7 @@ prefix="form"%>
 			<li><a href="addHero.html">Add Hero to Directory</a></li>
 			<li><a class="active" href="goToChangeHero.do">Change a Hero's Name</a></li>
 			<li><a href="goToKillNemesis.do">Kill a Nemesis</a></li>
+			<li style="float:right"><a class="about" href="https://www.linkedin.com/in/steven-zuber-9849095b">About the Author</a></li>
 </ul>
 </head>
 <body>
@@ -23,6 +24,6 @@ prefix="form"%>
 		</select> New Name: <input type="text" name="newName" placeholder="" /><br />
 		<input type="submit" value="Change Name" />
 	</form>
-
+<div class="footer">Created by Steven Zuber in week 7 of Skill Distillery</div>
 </body>
 </html>
