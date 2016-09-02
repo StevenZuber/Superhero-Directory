@@ -16,6 +16,14 @@ body {
   background-position: center;
   
 }
+.view {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.72222;
+  background-image: none;
+
+  
+}
 
 table{
 	table-layout: auto;
