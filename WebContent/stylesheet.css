@@ -118,3 +118,12 @@ li a.active {
   background-color: #A9A9A9;
   text-align: center;
 }
+.text { 
+font-family: "Lato", Helvetica, Arial, sans-serif;
+font-size: 12px; 
+color: #33CC33; 
+opacity:1; 
+filter:alpha(opacity=100); 
+-moz-opacity:1; 
+-khtml-opacity:1; 
+} 

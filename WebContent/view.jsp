@@ -13,6 +13,7 @@ prefix="form"%>
 			<li><a href="goToKillNemesis.do">Kill a Nemesis</a></li>
 			<li style="float:right"><a class="about" href="https://www.linkedin.com/in/steven-zuber-9849095b">About the Author</a></li>
 </ul>
+<br>
 </head>
 <body class="view">
 	<div class="HeroInfo">

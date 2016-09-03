@@ -26,6 +26,6 @@ prefix="form"%>
 		<input type="submit" value="Kill Nemesis" />
 	</form>
 
-<div class="footer">Created by Steven Zuber in week 7 of Skill Distillery</div>
+<div class="footer">&copy; <a href="http://stevenzuber.info">Steven Zuber</a> in week 7 of Skill Distillery </div>
 </body>
 </html>

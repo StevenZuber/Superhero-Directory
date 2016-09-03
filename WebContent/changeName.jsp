@@ -24,6 +24,6 @@ prefix="form"%>
 		</select> New Name: <input type="text" name="newName" placeholder="" /><br />
 		<input type="submit" value="Change Name" />
 	</form>
-<div class="footer">Created by Steven Zuber in week 7 of Skill Distillery</div>
+<div class="footer">&copy; <a href="http://stevenzuber.info">Steven Zuber</a> in week 7 of Skill Distillery </div>
 </body>
 </html>
