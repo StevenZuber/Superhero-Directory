@@ -80,8 +80,7 @@ public class HeroFileDAO implements HeroDAO
 		heroes.add(hero);
 	}
 	@Override
-	//find the method that removes by index number. 
-	//this method also needs to match hero name to index number.
+
 	public void removeHero(Hero hero){
 		heroes.remove(hero);
 	}
