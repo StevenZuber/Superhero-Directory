@@ -9,6 +9,7 @@ public interface HeroDAO {
 		void removeHero(Hero hero);
 		Hero getHeroByName(String heroName);
 		public Hero changeName();
+		public Hero changeName(Hero hero);
 	}
 
 

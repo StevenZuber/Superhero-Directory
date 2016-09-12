@@ -129,32 +129,39 @@ public class SuperheroDbDAO implements HeroDAO {
 	}
 
 	@Override
-	public Hero changeName() {
-		Hero hero = null;
+	public Hero changeName(Hero hero) {
 			try {
 				Connection conn = DriverManager.getConnection(url, user, pword);
 				String sqltxt;
-				sqltxt = "UPDATE superhero SET hero_name =? WHERE hero_name = ?;";
+				sqltxt = "UPDATE superhero SET hero_name = ? WHERE hero_name = ?;";
 				PreparedStatement stmt = conn.prepareStatement(sqltxt);
 				stmt.setString(1, hero.getHeroName());
-//				stmt.setString(2, hero.getAlterEgo());
-//				stmt.setString(3, hero.getUniverse());
-//				stmt.setString(4, hero.getHasCape());
-//				stmt.setString(5, hero.getPower());
-//				stmt.setString(6, hero.getArchNemesis());
+				stmt.setString(2, hero.getAlterEgo());
+				stmt.setString(3, hero.getUniverse());
+				stmt.setString(4, hero.getHasCape());
+				stmt.setString(5, hero.getPower());
+				stmt.setString(6, hero.getArchNemesis());
 				int uc = stmt.executeUpdate();
 				if(uc == 1){
-					System.out.println("Hero Deleted.");
+					System.out.println("Hero Name Changes.");
+					
 				}
 				else{
-					System.err.println("No Hero Deleted.");
+					System.err.println("No Name Change.");
 				}
 				stmt.close();
 				conn.close();
 			} catch (SQLException sqle) {
 				sqle.printStackTrace(System.err);
 			}
-				return hero;
+			return hero;
+		
+	}
+
+	@Override
+	public Hero changeName() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }
