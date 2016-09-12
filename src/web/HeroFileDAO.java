@@ -96,4 +96,17 @@ public class HeroFileDAO implements HeroDAO
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public Hero changeName(Hero hero, String newName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Hero killNemesis(Hero hero, String string) {
+		return hero;
+		// TODO Auto-generated method stub
+		
+	}
 }

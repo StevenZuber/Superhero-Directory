@@ -51,7 +51,7 @@ public class SuperheroDirectoryController {
 	@RequestMapping("changeHero.do")
 	public ModelAndView changeName(@RequestParam("heroName") String oldName, @RequestParam("newName") String newName) {
 		Hero oldHero = heroDAO.getHeroByName(oldName);
-		oldHero.setHeroName(newName);
+		heroDAO.changeName(oldHero, newName);
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("heroList", heroDAO.getHeroes());
 		mv.setViewName("view.jsp");
@@ -84,7 +84,7 @@ public class SuperheroDirectoryController {
 			mv.setViewName("view.jsp");
 			return mv;
 		} else {
-			murderer.setArchNemesis("RIP " + deadNemesis);
+			heroDAO.killNemesis(murderer, deadNemesis);
 			ModelAndView mv = new ModelAndView();
 			mv.addObject("heroList", heroDAO.getHeroes());
 			mv.setViewName("view.jsp");

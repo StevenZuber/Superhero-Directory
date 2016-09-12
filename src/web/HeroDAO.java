@@ -10,6 +10,9 @@ public interface HeroDAO {
 		Hero getHeroByName(String heroName);
 		public Hero changeName();
 		public Hero changeName(Hero hero);
+		public Hero changeName(Hero hero, String newName);
+		public Hero killNemesis(Hero hero, String string);
+
 	}
 
 

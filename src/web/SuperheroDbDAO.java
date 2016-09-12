@@ -14,7 +14,6 @@ public class SuperheroDbDAO implements HeroDAO {
 	private static final String url = "jdbc:mysql://localhost:3306/superhero";
 	private static final String user = "user";
 	private static final String pword = "user";
-	List<Hero> heroes = new ArrayList<>();
 	
 	public SuperheroDbDAO() {
 		try {
@@ -26,6 +25,7 @@ public class SuperheroDbDAO implements HeroDAO {
 	
 	@Override
 	public List<Hero> getHeroes() {
+		List<Hero> heroes = new ArrayList<>();
 		try {
 			Connection conn = DriverManager.getConnection(url, user, pword);
 			String sqltxt;
@@ -129,18 +129,14 @@ public class SuperheroDbDAO implements HeroDAO {
 	}
 
 	@Override
-	public Hero changeName(Hero hero) {
+	public Hero changeName(Hero hero, String newName) {
 			try {
 				Connection conn = DriverManager.getConnection(url, user, pword);
 				String sqltxt;
-				sqltxt = "UPDATE superhero SET hero_name = ? WHERE hero_name = ?;";
+				sqltxt = "UPDATE superhero SET hero_name = ? WHERE hero_name = ?";
 				PreparedStatement stmt = conn.prepareStatement(sqltxt);
-				stmt.setString(1, hero.getHeroName());
-				stmt.setString(2, hero.getAlterEgo());
-				stmt.setString(3, hero.getUniverse());
-				stmt.setString(4, hero.getHasCape());
-				stmt.setString(5, hero.getPower());
-				stmt.setString(6, hero.getArchNemesis());
+				stmt.setString(1, newName);
+				stmt.setString(2, hero.getHeroName());
 				int uc = stmt.executeUpdate();
 				if(uc == 1){
 					System.out.println("Hero Name Changes.");
@@ -162,6 +158,37 @@ public class SuperheroDbDAO implements HeroDAO {
 	public Hero changeName() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public Hero changeName(Hero hero) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public Hero killNemesis(Hero hero, String nemesis){
+		try {
+			Connection conn = DriverManager.getConnection(url, user, pword);
+			String sqltxt;
+			sqltxt = "UPDATE superhero SET arch_nemesis = ? WHERE hero_name = ?";
+			PreparedStatement stmt = conn.prepareStatement(sqltxt);
+			stmt.setString(1, "RIP " + nemesis);
+			stmt.setString(2, hero.getHeroName());
+			int uc = stmt.executeUpdate();
+			if(uc == 1){
+				System.out.println("Dead Nemesis.");
+				
+			}
+			else{
+				System.err.println("No Dead Nemesis.");
+			}
+			stmt.close();
+			conn.close();
+		} catch (SQLException sqle) {
+			sqle.printStackTrace(System.err);
+		}
+		
+		return hero;
+		
 	}
 
 }
