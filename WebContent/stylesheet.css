@@ -81,10 +81,7 @@ ul {
     border: 1px solid #555;
 }
 
-li a.about{
-    float: right;
-    text-align: center;
-}
+
 li {
     float: left;
     text-align: center;

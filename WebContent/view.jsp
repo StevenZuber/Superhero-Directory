@@ -6,6 +6,8 @@ prefix="form"%>
 <head>
 <title>Heroes List</title>
 <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+<link rel="stylesheet" type="text/css" href="skeleton.css" />
+
 	<ul>
 			<li><a class="active" href="Heroes.do" >See Hero Directory</a></li>
 			<li><a href="addHero.html">Add Hero to Directory</a></li>
