@@ -1,6 +1,6 @@
 VERSION 2.0
 
-This website was created as the weekend project at the end of week 7 (and again at the end of week 8 where we updated from reading the file in from a csv to a dtabase) of Skill Distillery and was written by Steven Zuber.
+This website was created as the weekend project at the end of week 7 (and again at the end of week 8 where we updated from reading the file in from a csv to a database) of Skill Distillery and was written by Steven Zuber.
 The goal of the project was to create a website that incorporated CRUD (Create, Read, Update, and Delete)
 functionality work with at least one of the objects through a web gui.
 
